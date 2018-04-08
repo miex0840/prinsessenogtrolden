@@ -1,3 +1,5 @@
+/*-----------------SCENE-----------------*/
+
 .baggrund {
     background-image: url("baggrund.png");
     background-size: cover;
@@ -5,7 +7,7 @@
     height: 56vw;
     margin: auto;
     position: relative;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .mellemgrund {
@@ -113,5 +115,68 @@
 
     100% {
         transform: translateX(-120vw);
+    }
+}
+
+/*----------------FIGURER----------------*/
+
+.prinsesse {
+    background-image: url("prinsesse.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20vw;
+    height: 40vw;
+    position: absolute;
+    top: 25vw;
+    left: 30vw;
+    z-index: 4;
+
+    animation-name: prinsesse;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+}
+
+@keyframes prinsesse {
+    0% {
+        transform: translateX(-35vw);
+    }
+
+    50% {
+        transform: translateX(0vw);
+    }
+}
+
+.trold {
+    background-image: url("trold.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30vw;
+    height: 60vw;
+    position: absolute;
+    top: 16vw;
+    left: 45vw;
+    z-index: 4;
+
+    animation-name: trold;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
+@keyframes trold {
+    0% {
+        transform: translateY(30vw) translateX(10vw);
+    }
+
+    40% {
+        transform: translateX(10vw);
+    }
+
+    50% {
+        transform: translateY(0vw)
+    }
+
+    100% {
+        transform: translateX(0vw);
     }
 }
