@@ -1,3 +1,59 @@
+* {
+    outline: 1px dotted red;
+}
+
+/*-----------------STYLE-----------------*/
+
+body {
+    background-color: #f2c6ce;
+}
+
+main {
+    background-color: white;
+    padding: 1em;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+}
+
+nav {
+    margin: auto;
+}
+
+a {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 1em;
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+    margin: 1em;
+}
+
+a:hover {
+    background-color: #f5e9eb;
+}
+
+.figurerparent {
+    display: flex;
+}
+
+.figurerchild {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
 /*-----------------SCENE-----------------*/
 
 .baggrund {
