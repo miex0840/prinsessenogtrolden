@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 /*-----------------STYLE-----------------*/
 
 body {
@@ -29,7 +33,7 @@ a {
     font-family: sans-serif;
     text-decoration: none;
     color: black;
-    display: inline-block;
+    display: block;
     padding: 1em;
     border: 1px solid black;
     width: 100px;
