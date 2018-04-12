@@ -56,7 +56,7 @@ a:hover {
 
 /*-----------------SCENE-----------------*/
 
-.baggrund {
+#baggrund {
     background-image: url("baggrund.png");
     background-size: cover;
     width: 100vw;
@@ -66,7 +66,7 @@ a:hover {
     overflow: hidden;
 }
 
-.mellemgrund {
+#mellemgrund {
     background-image: url("mellemgrund.png");
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -76,7 +76,7 @@ a:hover {
     z-index: 2;
 }
 
-.forgrund {
+#forgrund {
     background-image: url("forgrund.png");
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -86,7 +86,7 @@ a:hover {
     z-index: 99;
 }
 
-.sky_s {
+#sky_s {
     background-image: url("skys.png");
     background-repeat: no-repeat;
     background-size: 20vw;
@@ -112,7 +112,7 @@ a:hover {
     }
 }
 
-.sky_m {
+#sky_m {
     background-image: url("skym.png");
     background-repeat: no-repeat;
     background-size: 20vw;
@@ -138,7 +138,7 @@ a:hover {
     }
 }
 
-.sky_l {
+#sky_l {
     background-image: url("skyl.png");
     background-repeat: no-repeat;
     background-size: 15vw;
@@ -164,65 +164,131 @@ a:hover {
     }
 }
 
-/*----------------FIGURER----------------*/
+/*----------------Prinsesse container----------------*/
 
-.prinsesse {
-    background-image: url("prinsesse.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 20vw;
-    height: 40vw;
+#prinsesse_container {
     position: absolute;
-    top: 25vw;
-    left: 30vw;
-    z-index: 4;
+    top: 22vw;
+    z-index: 10;
+}
 
-    animation-name: prinsesse;
-    animation-duration: 10s;
+/* Flytte anim: Prinsesse kommer ind */
+
+.prinsesse_walk_in {
+    animation-name: prinsesse_walk_in_kf;
+    animation-duration: 5s;
     animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
-@keyframes prinsesse {
-    0% {
-        transform: translateX(-35vw);
+@keyframes prinsesse_walk_in_kf {
+    from {
+        left: -20vw;
     }
 
-    50% {
-        transform: translateX(0vw);
+    to {
+        left: 30vw;
     }
 }
 
-.trold {
-    background-image: url("trold.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 30vw;
-    height: 60vw;
-    position: absolute;
-    top: 16vw;
-    left: 45vw;
-    z-index: 4;
+/* Placering: Prinsesse er inde */
 
-    animation-name: trold;
-    animation-duration: 20s;
-    animation-delay: 0s;
+.position_in {
+    left: 40vw;
+}
+
+/* Flytte anim: Prinsesse løber */
+
+.prinsesse_run {
+    animation-name: prinsesse_run_kf;
+    animation-duration: 2s;
     animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
-@keyframes trold {
+@keyframes prinsesse_run_kf {
+    from {
+        left: 30vw;
+    }
+
+    to {
+        left: 0vw;
+    }
+}
+
+/*--------------------Prinsesse sprite-----------------*/
+
+#prinsesse_sprite {
+    background-image: url("prinsesse_sprite.svg");
+    background-size: 800% 300%;
+    width: 25vw;
+    height: 35.75vw;
+}
+
+/* Sprite anim: Prinsesse går */
+
+.walk {
+    animation-name: walk_kf;
+    animation-duration: 1s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes walk_kf {
     0% {
-        transform: translateY(30vw) translateX(10vw);
+        background-position: 0 0%;
     }
-
-    40% {
-        transform: translateX(10vw);
-    }
-
-    50% {
-        transform: translateY(0vw)
-    }
-
     100% {
-        transform: translateX(0vw);
+        background-position: -800% 0%;
     }
+}
+
+/* Stilbillede: Prinsesse skriger */
+
+.prinsesse_skriger {
+    background-position: 0;
+}
+
+/* Sprite anim: Prinsesse løber */
+
+.prinsesse_loeber {
+    background-position: 0 100%;
+    transform: scaleX(-1);
+
+    animation-name: run_kf;
+    animation-duration: 0.7s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes run_kf {
+    0% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: -800% 100%;
+    }
+}
+
+/*------------------Trold container--------------------*/
+
+#trold_container {
+    position: absolute;
+    top: 20vw;
+    left: 68vw;
+    z-index: 10;
+}
+
+/*-------------------Trold sprite----------------------*/
+
+#trold_sprite {
+    background-image: url("trollwalk-02.svg");
+    background-size: 800% 100%;
+    width: 28vw;
+    height: 40.04vw;
+    transform: scaleX(-1);
 }
