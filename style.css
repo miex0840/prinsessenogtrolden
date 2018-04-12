@@ -86,17 +86,7 @@ a:hover {
     z-index: 99;
 }
 
-.sten {
-    background-image: url("sten.png");
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    width: 100vw;
-    height: 100vw;
-    position: absolute;
-    z-index: 50;
-}
-
-.skys {
+.sky_s {
     background-image: url("skys.png");
     background-repeat: no-repeat;
     background-size: 20vw;
@@ -106,13 +96,23 @@ a:hover {
     left: 100vw;
     top: -5vw;
 
-    animation-name: skys;
+    animation-name: sky_s;
     animation-duration: 90s;
     animation-delay: -10s;
     animation-iteration-count: infinite;
 }
 
-.skym {
+@keyframes sky_s {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(-120vw);
+    }
+}
+
+.sky_m {
     background-image: url("skym.png");
     background-repeat: no-repeat;
     background-size: 20vw;
@@ -122,13 +122,23 @@ a:hover {
     top: 0vw;
     left: 100vw;
 
-    animation-name: skym;
+    animation-name: sky_m;
     animation-duration: 60s;
     animation-delay: -15s;
     animation-iteration-count: infinite;
 }
 
-.skyl {
+@keyframes sky_m {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(-120vw);
+    }
+}
+
+.sky_l {
     background-image: url("skyl.png");
     background-repeat: no-repeat;
     background-size: 15vw;
@@ -138,33 +148,13 @@ a:hover {
     top: 1vw;
     left: 100vw;
 
-    animation-name: skyl;
+    animation-name: sky_l;
     animation-duration: 30s;
     animation-delay: -15s;
     animation-iteration-count: infinite;
 }
 
-@keyframes skys {
-    0% {
-        transform: translateX(0vw);
-    }
-
-    100% {
-        transform: translateX(-120vw);
-    }
-}
-
-@keyframes skym {
-    0% {
-        transform: translateX(0vw);
-    }
-
-    100% {
-        transform: translateX(-120vw);
-    }
-}
-
-@keyframes skyl {
+@keyframes sky_l {
     0% {
         transform: translateX(0vw);
     }
