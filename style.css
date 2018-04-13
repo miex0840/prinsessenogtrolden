@@ -174,15 +174,15 @@ a:hover {
 
 /* Flytte anim: Prinsesse kommer ind */
 
-.prinsesse_walk_in {
-    animation-name: prinsesse_walk_in_kf;
+.prinsesse_kommer_ind {
+    animation-name: prinsesse_kommer_ind;
     animation-duration: 5s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
-@keyframes prinsesse_walk_in_kf {
+@keyframes prinsesse_kommer_ind {
     from {
         left: -20vw;
     }
@@ -194,21 +194,21 @@ a:hover {
 
 /* Placering: Prinsesse er inde */
 
-.position_in {
-    left: 40vw;
+.position_ind {
+    left: 30vw;
 }
 
 /* Flytte anim: Prinsesse løber */
 
-.prinsesse_run {
-    animation-name: prinsesse_run_kf;
+.prinsesse_loeb {
+    animation-name: prinsesse_loeb;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
-@keyframes prinsesse_run_kf {
+@keyframes prinsesse_loeb {
     from {
         left: 30vw;
     }
@@ -229,15 +229,15 @@ a:hover {
 
 /* Sprite anim: Prinsesse går */
 
-.walk {
-    animation-name: walk_kf;
+.prinsesse_gaar {
+    animation-name: prinsesse_gaar;
     animation-duration: 1s;
     animation-timing-function: steps(8);
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 }
 
-@keyframes walk_kf {
+@keyframes prinsesse_gaar {
     0% {
         background-position: 0 0%;
     }
@@ -258,20 +258,26 @@ a:hover {
     background-position: 0 100%;
     transform: scaleX(-1);
 
-    animation-name: run_kf;
+    animation-name: prinsesesse_loeber;
     animation-duration: 0.7s;
     animation-timing-function: steps(8);
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 }
 
-@keyframes run_kf {
+@keyframes prinsesse_loeber {
     0% {
         background-position: 0 100%;
     }
     100% {
         background-position: -800% 100%;
     }
+}
+
+/* Prinsesse fanget */
+
+.prinsesse_fanget {
+    background-position: 0;
 }
 
 /*------------------Trold container--------------------*/
@@ -283,12 +289,116 @@ a:hover {
     z-index: 10;
 }
 
+/* Flytte anim: Trold kommer frem */
+
+.trold_kommer_frem {
+    animation-name: trold_kommer_frem;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes trold_kommer_frem {
+    from {
+        left: 68vw;
+        top: 50vw;
+    }
+
+    to {
+        left: 68vw;
+        top: 20vw;
+    }
+}
+
+/* Flytte anim: Trold løber */
+
+.trold_loeb {
+    animation-name: trold_loeb;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes trold_loeb {
+    from {
+        left: 68vw;
+    }
+
+    to {
+        left: 20vw;
+    }
+}
+
+/* Trold har fanget prinsesse */
+
+.trold_fanget_prinsesse {
+    left: 20vw;
+}
+
 /*-------------------Trold sprite----------------------*/
 
 #trold_sprite {
-    background-image: url("trollwalk-02.svg");
-    background-size: 800% 100%;
+    background-image: url("trold_sprite.svg");
+    background-size: 800% 200%;
     width: 28vw;
     height: 40.04vw;
     transform: scaleX(-1);
+}
+
+/* Sprite anim: Trold løber */
+
+.trold_loeber {
+    background-position: 0 100%;
+    transform: scaleX(-1);
+
+    animation-name: trold_loeber;
+    animation-duration: 2s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes trold_loeber {
+    0% {
+        background-position: 0% 200%;
+    }
+    100% {
+        background-position: -800% 200%;
+    }
+}
+
+/*------------------------Bur--------------------------*/
+
+#bur {
+    position: absolute;
+    background-image: url(bur.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 40vw;
+    z-index: 15;
+    top: -40vw;
+    left: 1vw;
+}
+
+.bur_kommer_ned {
+    animation-name: bur_kommer_ned;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes bur_kommer_ned {
+    from {
+        top: -40vw;
+    }
+
+    to {
+        18vw;
+    }
+}
+
+.bur_nede {
+    top: 18vw;
 }
