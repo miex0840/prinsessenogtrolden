@@ -188,14 +188,14 @@ a:hover {
     }
 
     to {
-        left: 30vw;
+        left: 40vw;
     }
 }
 
 /* Placering: Prinsesse er inde */
 
 .position_ind {
-    left: 30vw;
+    left: 40vw;
 }
 
 /* Flytte anim: Prinsesse løber */
@@ -210,7 +210,7 @@ a:hover {
 
 @keyframes prinsesse_loeb {
     from {
-        left: 30vw;
+        left: 40vw;
     }
 
     to {
@@ -222,7 +222,7 @@ a:hover {
 
 #prinsesse_sprite {
     background-image: url("prinsesse_sprite.svg");
-    background-size: 800% 300%;
+    background-size: 800% 400%;
     width: 25vw;
     height: 35.75vw;
 }
@@ -246,19 +246,25 @@ a:hover {
     }
 }
 
+/* Stilbillede: Prinsesse står */
+
+.prinsesse_staar {
+    background-position: 0 -300%;
+}
+
 /* Stilbillede: Prinsesse skriger */
 
 .prinsesse_skriger {
-    background-position: 0;
+    background-position: 0 -100%;
 }
 
 /* Sprite anim: Prinsesse løber */
 
 .prinsesse_loeber {
-    background-position: 0 100%;
+    background-position: 0 -200%;
     transform: scaleX(-1);
 
-    animation-name: prinsesesse_loeber;
+    animation-name: prinsesse_loeber;
     animation-duration: 0.7s;
     animation-timing-function: steps(8);
     animation-iteration-count: infinite;
@@ -267,10 +273,10 @@ a:hover {
 
 @keyframes prinsesse_loeber {
     0% {
-        background-position: 0 100%;
+        background-position: 0 -200%;
     }
     100% {
-        background-position: -800% 100%;
+        background-position: -800% -200%;
     }
 }
 
@@ -284,16 +290,21 @@ a:hover {
 
 #trold_container {
     position: absolute;
-    top: 20vw;
-    left: 68vw;
     z-index: 10;
+}
+
+/* Trold gemmer bag sten */
+
+.trold_bag_sten {
+    top: 60vw;
 }
 
 /* Flytte anim: Trold kommer frem */
 
 .trold_kommer_frem {
+
     animation-name: trold_kommer_frem;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -302,12 +313,12 @@ a:hover {
 @keyframes trold_kommer_frem {
     from {
         left: 68vw;
-        top: 50vw;
+        top: 40vw;
     }
 
     to {
         left: 68vw;
-        top: 20vw;
+        top: 18vw;
     }
 }
 
@@ -315,7 +326,7 @@ a:hover {
 
 .trold_loeb {
     animation-name: trold_loeb;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -324,10 +335,12 @@ a:hover {
 @keyframes trold_loeb {
     from {
         left: 68vw;
+        top: 18vw;
     }
 
     to {
         left: 20vw;
+        top: 18vw;
     }
 }
 
@@ -345,6 +358,12 @@ a:hover {
     width: 28vw;
     height: 40.04vw;
     transform: scaleX(-1);
+}
+
+/* Trold front */
+
+.trold_front {
+    background-position: 0 100%;
 }
 
 /* Sprite anim: Trold løber */
@@ -379,8 +398,10 @@ a:hover {
     width: 25vw;
     height: 40vw;
     z-index: 15;
+}
+
+.bur_oppe {
     top: -40vw;
-    left: 1vw;
 }
 
 .bur_kommer_ned {
@@ -392,13 +413,16 @@ a:hover {
 @keyframes bur_kommer_ned {
     from {
         top: -40vw;
+        left: 1vw;
     }
 
     to {
-        18vw;
+        top: 18vw;
+        left: 1vw;
     }
 }
 
 .bur_nede {
     top: 18vw;
+    left: 1vw;
 }
